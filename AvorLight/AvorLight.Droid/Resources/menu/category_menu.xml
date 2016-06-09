@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:local="http://schemas.android.com/apk/res-auto">
+	<item
+			 android:id="@+id/menuShoppingCart"
+			 android:icon="@drawable/ic_shopping_cart"
+			 local:showAsAction="always"
+			 android:title="My Shopping Cart" />
+
+	<item
+			 android:id="@+id/menuSortByTitle"
+			 android:icon="@drawable/ic_sort_by_alpha"
+			 local:showAsAction="ifRoom"
+			 android:title="Sort by Title" />
+	<item
+			 android:id="@+id/menuSortByPrice"
+			 android:icon="@drawable/ic_sort_by_price"
+			 local:showAsAction="ifRoom"
+			 android:title="Sort by Price" />
+	
+</menu>

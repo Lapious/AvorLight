@@ -1,0 +1,4167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{21E4CC68-CF1D-4A6F-9190-28A3C922BA92}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>AvorLight.Droid</RootNamespace>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <AssemblyName>AvorLight.Droid</AssemblyName>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="Xamarin.Android.Support.Animated.Vector.Drawable, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Android.Support.Animated.Vector.Drawable.23.3.0\lib\MonoAndroid403\Xamarin.Android.Support.Animated.Vector.Drawable.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Design, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Android.Support.Design.23.3.0\lib\MonoAndroid43\Xamarin.Android.Support.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v4, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Android.Support.v4.23.3.0\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.AppCompat, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Android.Support.v7.AppCompat.23.3.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.RecyclerView, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Android.Support.v7.RecyclerView.23.3.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.RecyclerView.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Vector.Drawable, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\lib\MonoAndroid403\Xamarin.Android.Support.Vector.Drawable.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Activities\CartActivity.cs" />
+    <Compile Include="Activities\ProductActivity.cs" />
+    <Compile Include="Activities\MainActivity.cs" />
+    <Compile Include="Activities\SplashActivity.cs" />
+    <Compile Include="Adapters\CartAdapter.cs" />
+    <Compile Include="Adapters\ProductAdapter.cs" />
+    <Compile Include="Adapters\MainMenuAdapter.cs" />
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\AvorDB" />
+    <None Include="packages.config" />
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="Assets\AboutAssets.txt" />
+    <AndroidResource Include="Resources\layout\Category.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ProductItem.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MyCart.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\CartProductItem.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Main.axml" />
+    <AndroidResource Include="Resources\values\Strings.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\style.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values-v21\style.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\colors.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\toolbar.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\CategoryItem.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\category_drinks.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\category_ethnicreadymeals.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\category_foodcupboard.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\category_frozenfood.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\category_fruitvegetables.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\category_homeentertainment.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\category_householdpets.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\category_lifestyle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\category_meatfishpoultry.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\category_offers.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\category_baby.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\category_bakery.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\category_dairy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\ic_add_shopping_cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\ic_add_shopping_cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_add_shopping_cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_add_shopping_cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_add_shopping_cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\ic_remove_shopping_cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\drf-kids-hygienic-wipes-apple.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\drf-kids-hygienic-wipes-grapes.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\drf-nat-baby-herbal-pasta-100ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\drf-sens-baby-bath-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\event-baby-cotton-buds-x55-1-1-free.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\event-b-wipes-al-vera-sens-15wipes-2-1free.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\fisher-price-easy-sip-w-silic-spout.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\gerber-1-apple-grape-juice-175ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\gerber-1-pear-juice-175ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\gerber-1-pears-80g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\gerber-2-apple-carrot-no-sugar-175ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\gerber-2-apple-for-fruits-130g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\gerber-2-apple-pear-130g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\gerber-2-apple-prunes-130g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\gerber-2-apple-sauce-130g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\gerber-3-chicken-veget-190g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\gerber-3-spagh-chicken-190g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\gerber-vegetable-soup-125g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\hipp-veget-noodles-ham-220g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\hug-fr-junior-12-19kg-no-5-x18.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\hug-fr-maxi-10-16kg-4-x22.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\huggies-freedom4-10-16kgmxx46.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\huggies-freedom5-12-19kgjrx42.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\huggies-fr-jumbo-16-kg-6-x20.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\huggies-fr-jumbo-16-kg-6-x36.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\huggies-fr-jumbo-16-kg-no-6x20.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\huggies-fr-maxi-8-14kg-4-x24.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\huggies-fr-maxi-8-14kg-4-x50.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\huggies-fr-midi-5-9kg-3-x29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\huggies-fr-midi-5-9kg-3-x60.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\huggies-p-ups-boy-11-18kg-5-x14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\huggies-p-ups-girl-8-15kg-4-x16.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\hug-newborn-3-6kg-mini-2-x35.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\hug-p-ups-boy-8-15kg-med-x16.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\hug-p-ups-girl-11-18kg-5-x14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\humana-follow-on-milk-350g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\humana-infant-formula-450g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\nan-4-baby-milk-400g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\nan-fr-wipes-hello-kitty-80-s.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\nan-fr-wipes-kids-princess-20-s.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\nannys-b-love-junior-40-s-no5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\nannys-flex-maxi-26-s-no-4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\nannys-fresh-innocence-2-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\nannys-fresh-innocencex64-2-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\nannys-fresh-wipes-aloe-x20.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\nannys-fresh-wipes-aloe-x40.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\nannys-fresh-wipes-votana-20-s.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\nannys-fr-wipes-tom-jerry-80-s.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\neslac-prebiotic-rtd-milk-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\nestle-baby-milk-nan-2-plus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\nestle-baby-milk-nan-3-400g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\nestle-biscuit-cream-250g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\nestle-chicken-vegetables-250g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\nestle-cocktail-4-fruits-2x130g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\nestle-farine-lacte-350g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\nestle-infant-rice-cereal-250g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\nestle-juice-apple-peach-200ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\nestle-mix-vege-veal-250g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\nestle-ready-to-drink-milk-2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\nestle-rice-vanilla-350g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\nestle-veg-with-turkey-2x200g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\ninolac-rice-milk-400g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\ninolac-wheat-milk-5fruit-400g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\ninolac-wheat-milk-400g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\ninolac-wheat-milk-dates-400g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\ninolac-wheat-milk-honey-400g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\nounou-biscuits-cream-300g-1-00.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\nounou-frisolac-h-babymlk-400g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\nounou-frisolac-h-babymlk-900g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\nounou-noulac-milk-400g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\nounou-noulac-milk-kid-400g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\nounou-precooked-rice-200g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\nounou-van-cream-rice-1-20-350g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\pamp-a-fit-junior-plus-size5-x37.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\pamp-a-fit-junior-size5-x38.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\pamp-a-fit-maxi-plus-size4-x40.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\pamp-a-fit-maxi-size4-x43.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\pamp-b-dry-mini-sz4-x58.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\pampers-baby-dry-extra-large-no-6-x19.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\pampers-baby-dry-junior-no-5-x39-offer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\pampers-baby-dry-maxi-no-4-x44-offer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\pampers-baby-dry-maxi-plus-no-4-x41-offer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\pampers-baby-dry-midi-no-3-x50-offer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\pampers-baby-wipes-fresh-clean-x64-offer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\pampers-easy-up-maxi-no-4-x22.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\pampers-easy-up-no-5-junior-x20.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\pampers-easy-up-no-6-extra-large-x19.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\pampers-new-baby-no-1-newborn-x45.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\pampers-new-baby-no-2-mini-x56.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\pamp-nbaby-mini-size2-x33-cp.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\s-gentle-200-s-pink-cot-buds-200.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\s-gentle-cotton-wool-60g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\suavipiel-baby-soft-sponges-x2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\wildalp-baby-water-0-25l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\wildalp-baby-water-1-5l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\bebe-lita-natural-water-1-5l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\bebe-lita-natural-water-500ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\cleanic-al-vera-cotton-sticks-x200.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\cleanic-baby-cotton-sticks-x60.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\baby\dr-fischer-baby-wipes-x75-2-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\bread-crumbs-kapira-al-400g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\chrysh-zymh-sfoliata-pies-850g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\chrysh-zym-pastry-for-sweets.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\chr-zymi-fr-pastry-for-pies-450g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\chr-zymi-kateifi-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\danesita-bruschettas-deluxe-garlic-240g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\danesita-bruschettas-deluxe-oreg-240g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\danesita-bruschettas-deluxe-tom-240g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\danesita-toasts-deluxe-wheat-225g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\danesita-toasts-deluxe-whole-wheat-225g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\hamburger-buns-x2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\ioannas-home-made-baklavas-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\ioannas-home-made-kataifi-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\ioannas-home-made-kourampiedes-480g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\ioannas-home-made-melomakarona-480g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\ioannas-home-made-siamali-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\ioannas-home-made-yianniotiko-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\kolios-greek-pitta-bread-16cm-x20.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\kuchenm-chocolate-cake-400gr.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\kuchenm-marble-cake-400gr.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\multigrain-slcd-bread-sml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\pearl-s-blueberry-muffin-125g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\pearl-s-cherry-muffin-125g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\pearl-s-choc-chip-oran-muffin-125g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\pearl-s-choc-muffin-125g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\pearl-s-family-choco-cake-400g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\pearl-s-flapjack-choc-120g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\pearl-s-flapjack-original-120g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\pearl-s-flapjacks-apricot-120g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\pearl-s-flapjacks-cher-coco-120g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\pearl-s-flapjacks-cranber-120g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\pearl-s-flapjacks-honey-120g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\pearl-s-flapjacks-sultana-120g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\pearl-s-flapjack-strwberry120g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\pearl-s-flapjack-wh-choc-120g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\pearl-s-madeira-cake-400g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\pearl-s-marble-cake-400g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\pema-bio-barb-rutting-bread-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\pema-dark-rye-bread-500gr.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\pema-g-f-recebread-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\pema-pumpernickel-bread-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\pema-wh-grain-bread-sunfl-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\pema-wh-grain-oat-bread-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\pema-wh-grain-spec-bread-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\pitta-bread-lrg-x5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\prozymenio-bread-large-sliced-950g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\pullman-white-slcd-bread-lrg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\rustic-slcd-bread-sml-sq-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\salmona-waffles-cocoa-veresk-210g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\salmona-waffles-cr-van-veresk-210g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\sandwich-buns-x2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\trad-bran-rnd-bread-sm-sliced-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\trad-rnd-bread-large-sliced-1kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\trad-rnd-bread-sm-sliced-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\white-bread-square-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\aris-bread-750g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\artozym-arabic-pitta-large-x5-675g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\artozym-bread-crumbs-1kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\artozym-bread-crumbs-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\artozym-cocktail-pitta-x12-350g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\artozym-greek-pitta-x6-480g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\artozym-pafitiki-pitta-x5-750g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\artozym-pitta-large-x5-550g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\artozym-pitta-medium-x7-400g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\bezgluten-cocon-sand-bisc-g-f-210g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bakery\bjorg-honey-waffle-175g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\biser-sunflower-oil-5l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\carlsberg-8x33cl-cans.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\carosol-wine-red-dry-75cl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\carosol-wine-rose-dry-75cl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\carosol-wine-white-dry-75cl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\coca-cola-8x330ml-can.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\coca-cola-light-8x330ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\coca-cola-zero-8x330ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\der-general-aloe-vera-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\der-general-classic-1-5l-50-free.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\der-general-fresh-breeze-1-5l-50-free.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\der-general-lavender-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\der-general-wild-rose-1-5l-50-free.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\domestos-pink-power-750ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\domestos-thick-bl-citrus-750ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\domestos-thick-bleach-750ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\emeka-toilet-rolls-mnt-fr-x16.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\emeka-toilet-rolls-par-x16.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\emeka-toilet-rolls-x16.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\emeka-toilet-rolls-x24.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\famous-grouse-whisky-70cl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\farmakas-water-10l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\farmakas-water-pet-6x1-5l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\farmakas-water-pet-12x500ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\fresko-mushroom-slices-400g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\heinz-mayo-light-td-425g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\heinz-tomato-ketchup-460g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\ivi-apple-juice-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\ivi-apple-juice-9x250ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\ivi-energy-7-blue-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\ivi-energy-7-blue-9x250ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\ivi-energy-7-orange-juice-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\ivi-energy-7-red-juice-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\ivi-energy-red-9x250ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\ivi-go-blue-juice-9x250ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\ivi-go-red-juice-9x250ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\ivi-orange-6x330ml-cans.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\ivi-orange-juice-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\ivi-orange-juice-9x250ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\ivi-peach-nectar-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\ivi-peach-nectar-9x250ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\jacobs-intst-coffee-100g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\kellogg-s-chocos-375g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\kellogg-s-variety-195g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\keo-beer-6x33cl-cans.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\klinex-bleach-2l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\koko-drink-coconut-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\magia-double-lion-55g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\mint-chicken-fillet-650g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\mint-chicken-whole-2-3kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\mint-eggs-m-53-63g-x6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\mint-eggs-m-53-63g-x18.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\mint-eggs-m-53-63g-x30.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\mint-eggs-m-53-63-x12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\mint-green-beans-1kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\mint-mixed-vegetables-1kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\mint-octopus-800g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\mint-pangasius-fillet-750g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\mint-red-fish-1kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\mint-shrimps-h-on-21-30-1kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\mint-squid-cleaned-800g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\mint-squid-rings-1kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\mitsides-plain-flour-1kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\mitsides-village-flour-1kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\nat-life-mahalep-powder-10g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\nat-life-masticha-powder-7g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\nestle-honey-nut-cheerios-375g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\nestle-lion-cereal-400g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\pamp-b-dry-mini-sz4-x58.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\pampers-baby-dry-junior-no-5-x39-offer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\pampers-baby-dry-maxi-no-4-x44-offer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\pampers-baby-dry-maxi-plus-no-4-x41-offer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\pampers-baby-dry-midi-no-3-x50-offer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\pelargos-tomato-passata-3x250g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\pepsi-8x330ml-cans.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\pepsi-diet-8x330ml-cans.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\pepsi-max-8x330ml-cans.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\pittas-halloumi-vp-225g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\pullman-white-slcd-bread-lrg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\smirnoff-ice-vodka-275ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\somersby-cider-bottle-33cl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\sprite-8x330ml-can.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\triumph-self-raising-flour-1kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\3a-parboiled-rice-1kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\7days-bake-rolls-bacon-70g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\7days-bake-rolls-mini-pizza-80g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\7days-bake-rolls-salt-80g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\7days-min-bake-rolls-barbeque-80gx14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\7up-8x330ml-cans.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\7up-diet-8x330ml-cans.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\agros-water-bottles-12x0-5l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\agros-water-bottles-pet-6x1-5l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\alambra-yoghurt-giagia-400g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\alambra-yogurt-giagia-700g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\alhenco-vanilla-sugar-50g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\bacardi-breezer-lemon-27-5cl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\bacardi-breezer-lime-27-5cl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\bacardi-breezer-orange-27-5cl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\bacardi-breezer-wmellon-27-5cl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\offers\barba-stathis-salad-corn-450g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\chrys-frankfurters-sausag-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\chrys-ham-leg-slcd-150g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\chrys-ham-leg-sliced-1-fat-100g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\chrys-ham-leg-sliced-300g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\chrys-ham-shoulder-sliced-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\chrysodalia-hiromeri-100g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\chrysodalia-p-loin-wined-sliced-100g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\chrys-smkd-pork-loin-slcd-300g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\chrys-smkd-pork-loin-slcd-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\chrys-smkd-salami-slcd-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\chrys-smkd-turkey-breast-200g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\chrys-smkd-turkey-breast-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\crysodallia-village-sausages-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\fajita-ready-mix-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\fillet-steak-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\greg-back-bacon-unsmoked-300g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\grigoriou-back-bacon-slice-150g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\grigoriou-back-bacon-slices-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\grigoriou-cyprus-sausages-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\grigoriou-cyprus-sausages-tavernas-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\grigoriou-cyprus-thin-sausages-250g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\grigoriou-greek-sausages-380g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\grigoriou-ham-light-sliced-100g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\grigoriou-ham-shoulder-300g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\grigoriou-ham-slices-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\grigoriou-ham-spiderman-slices-100g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\grigoriou-hiromeri-slices-100g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\grigoriou-loutzaki-sliced-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\grigoriou-parizaki-300g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\grigoriou-pastourmas-sausage-300g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\grigoriou-salami-aeros-dry-220g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\grigoriou-salami-beef-300g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\grigoriou-salami-extra-300g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\grigoriou-salami-hungary-400g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\grigoriou-salami-hungary-slices-100g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\grigoriou-sliced-ham-leg-150g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\grigoriou-smoked-salami-300g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\grigoriou-smoked-salami-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\grigoriou-smoked-salami-sliced-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\grigoriou-smoked-turkey-sliced-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\grigoriou-streaky-bacon-150g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\grigoriou-str-ky-bacon-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\grigoriou-turkey-ham-sliced-100g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\grigoriou-turkey-salami-300g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\grigoriou-tur-sal-spiderman-300g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\grigoriou-village-lountza-slices-100g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\grigoriou-village-sausages-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\grig-pariz-disney-princess-300g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\grig-sm-turkey-br-disney-princes-sl-100g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\mince-meat-mix-beef-pork-650g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\mint-chicken-drumsticks-650g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\mint-chicken-fillet-650g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\mint-chicken-gizzards-650g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\mint-chicken-kebab-650g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\mint-chicken-legs-650g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\mint-chicken-liver-650g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\mint-chicken-thighs-650g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\mint-chicken-whole-2-3kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\mint-chicken-wings-650g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\mint-crab-claws-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\mint-crab-sticks-250g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\mint-crab-sticks-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\mint-quails-6-pcs-kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\mix-grill-cuts-720g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\politiko-650g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\pork-700g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\pork-bacon-mexican-style-700g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\pork-bacon-sliced-700g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\pork-chipolatas-sausages-300g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\pork-english-sausage-400g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\pork-fillet-700g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\pork-hamburger-600g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\pork-kebab-bacon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\pork-kontosouvli-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\pork-leg-minced-650g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\pork-leg-roast-1-2kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\pork-lincoln-sausages-400g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\pork-loin-chops.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\pork-loin-steak-550g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\pork-neck-chops.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\pork-neck-souvla-1-2kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\pork-schnitzel-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\pork-shoulder-afelia-700g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\pork-shoulder-kebab-700g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\pork-shoulder-souvla-1-2kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\pork-sieftalia-800g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\pork-souvla-bacon-1-2kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\pork-stripes-700g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\pork-trdtnl-meat-balls-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\auricchio-gorgonzola.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\beef-cubes-700g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\beef-minced-650g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\beef-roast-1-2kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\beef-stripes-700g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\camp-chorizo-extra-80g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\camp-sliced-serrano-ham-80g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\chrys-bacon-slcd-150g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\chrys-bacon-slcd-300g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\chrys-bacon-slcd-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\meat-fish-poultry\chrys-dry-hung-slcd-salami-100g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\alpro-soya-drink-banana-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\alpro-soya-drink-choc-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\alpro-soya-drink-chocola-250ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\alpro-soya-drink-cuisina-250ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\alpro-soya-drink-light-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\alpro-soya-drink-nature-organic-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\alpro-soya-drink-unsweetend-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\alpro-soya-drink-vanilla-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\alpro-soya-drink-vanilla-250ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\alpro-soya-natural-calcium-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\alpro-soy-natural-calcium-drink-500ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\becel-pro-activ-lght-sprd-250g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\becel-pro-activ-mlk-1l-0-fat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\becel-pro-activ-mlk-1l-1-8-fat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\becel-pro-activ-olive-oil-250g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\becel-pro-activ-spread-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\bezgluten-choco-punto-g-f-130g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\bezgluten-cocon-sand-bisc-g-f-210g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\birds-eye-4-veg-qurtr-pounders.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\bjorg-honey-waffle-175g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\b-san-choc-bisc-almond-s-f-110g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\b-san-milk-choc-bisc-s-f-120g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\christis-milk-delact-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\coca-cola-bottle-250ml-x24.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\coca-cola-light-8x330ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\coca-cola-zero-8x330ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\coca-cola-zero-bottle-250ml-x24.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\col-fresh-mastic-s-f-25g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\col-fresh-spearmints-s-f-25g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\col-fresh-strawberry-s-f-25g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\col-fresh-white-s-f-25g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\dilmah-roibos-organic-x20-env.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\fanta-orange-zero-4x330ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\fiorentini-bio-100-bio-pomegranate-juice-330ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\fiorentini-bio-bran-crusca-50gr.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\fiorentini-bio-corn-snack-tom-basil-g-f-50g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\fiorentini-bio-goji-juice-300ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\fiorentini-bio-oat-bran-cakes-g-f-100g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\fiorentini-rice-cake-yoghurt-str-g-f-100g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\flora-margarine-fastening-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\hain-coc-dream-orig-calcium-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\hain-rice-dream-orig-calc-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\hain-rice-dream-orig-organ-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\johnsof-bio-chocol-rice-cakes-120g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\johnsof-bio-corn-cakes-130g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\johnsof-bio-rice-cakes-120g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\lipton-ice-tea-light-l-6x330ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\monster-energy-zero-can-500ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\nestea-green-s-f-lemon-500ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\nestea-green-s-f-passionfruit-500ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\nova-choc-chips-cookies-s-f.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\nova-choc-wafers-s-f-140g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\nova-cream-wafers-s-f-140g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\nova-snack-equilibrado-s-f23g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\orbit-spearmint-sugar-free-27g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\orgran-chia-crispbread-125g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\orgran-chia-wafer-cracker-100g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\orgran-fibre-crispibread-125g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\orgran-itsy-bitsy-cacao-300g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\orgran-raspberry-biscuits-175g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\pagen-krisprolls-no-sugar-225g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\pema-bio-barb-rutting-bread-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\pema-g-f-recebread-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\provamel-bio-drink-vanilla-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\provamel-bio-soya-natural-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\provamel-bio-soya-plus-calcium-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\smint-strawberry-8g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\smint-sugar-free-8g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\sprite-zero-4x330ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\strepsils-honey-lemon-x24.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\tasoula-frozen-koupepia-nistisima-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\tuxf-bladen-white-vegetarian-cheddar-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\valor-s-f-milk-chocolate-100g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\valor-s-free-70-dark-choc-100g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\valor-s-free-70-dark-nibs-100g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\valor-s-free-dark-100g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\valor-s-free-dark-almonds-150g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\valor-s-free-dark-hazeln-150g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\valor-s-free-milk-almonds-150g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\valor-s-free-milk-hazeln-150g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\viotros-fastening-veget-vp-400g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\viotros-fasting-fetaki-140g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\virg-cremi-toffee-candies-s-f.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\virg-dietos-dark-choc-s-f-110g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\virg-dietos-milk-choc-s-f.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\virg-mix-choc-70-cocoa-s-f.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\virg-mix-choc-white-s-f-34g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\xox-snack-salz-stixx-250g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\zita-strained-yog-lact-free-300g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\alpro-dessert-speculoos-4x125g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\alpro-drink-banana-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\alpro-drink-banana-250ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\alpro-drink-natural-250ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\alpro-hazelnut-drink-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\alpro-rice-drink-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\alpro-soya-cream-light-250ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\alpro-soya-des-caramel-4x125g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\alpro-soya-des-choco-4x125g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\alpro-soya-des-fondant-4x125g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\lifestyle\alpro-soya-des-vanilla-4x125g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\fay-cleaning-sponge-small.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\fay-colorful-sponges-small-x5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\frosch-dishwash-machine-tablets-30-pcs.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\karen-household-rubber-gloves.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\karen-latex-disp-gloves-pdr-x100.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\karen-vinyl-disp-gloves-no-powd-x100.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\karen-vinyl-disp-gloves-powd-free-10pcs.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\klinex-bleach-2l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\nickel-broom-stick.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\raid-night-day-set-1-device-free.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\swipe-amore-broom.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\swipe-car-sponge-epogenda-2090.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\swipe-liquid-somethin-else.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\swipe-mouette-lusso-broom.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\swipe-oro-argento-scourer-x2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\swipe-piumetta-x2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\swipe-pola-broom.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\swipe-scourer-inox-x2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\swipe-scourer-oro-x2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\swipe-shovel-brush-set.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\swipe-shovel-without-brush.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\swipe-sorgun-broom-with-handle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\swipe-stadio-broom.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\swipe-swie-liq-standard.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\swipe-swipe-bella-broom.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-2in1-universal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-active-flex-twin-scourer-x2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-all-purp-cloth-odor-stop-2-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-all-purpose-cloth-3-1-free.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-all-purpose-cloth-4-2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-all-purpose-cloth-x3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-attractive-plus-dusting-system.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-bathtub-cleaner-mop.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-bucket-wringer-mf-mop-comp-set.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-car-cloth-packed.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-comfort-care-pair-large-gloves.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-comfort-care-pair-med-gloves.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-comfort-care-pair-small-gloves.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-drain-mat-50-59-3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-duactiva-indoor-broom.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-dustino-hand-duster.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-dustpan-set.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-eco-toilet-set.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-glitzi-bath-scourer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-glitzi-cr-antib-scour-2-1-free.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-glitzi-crystal-9pcs.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-glitzi-hard-scourer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-glitzi-power-inox-scourer-x2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-glitzi-soft-scourer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-handy-scourer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-indoor-broom-standard.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-inox-scouring-spiral-2-pieces.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-magical.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-microfibre-multi-cloth.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-microfibre-pad-cloth.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-microfibre-style-3-1-free.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-miraclean-scourer-4-pieces.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-mop-plastic-large.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-mop-plastic-small.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-multi-care-disp-gloves-md-l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-multicare-disp-gloves-sm-md.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-multi-sens-gloves-md-l-x40.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-multi-sens-gloves-sm-l-x40.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-protector-pair-medium-gloves.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-protector-pair-of-large-gloves.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-protector-pair-small-gloves.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-pumber-indoor-broom.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-rainbow-scourer-10-pieces.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-refill-active-mop-set.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-refill-for-dustino-hand-duster.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-round-bucket-12l-red-nozzle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-sensitive-pair-medium-gloves.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-sensitive-pair-of-large-gloves.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-sensitive-pair-of-small-gloves.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-sponge-cloth-power-x3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-starlet-semi-disp-cloth-x10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-super-grip-pair-large-gloves.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-super-grip-pair-medium-gloves.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-super-grip-pair-small-gloves.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-super-mocio-microfibre-x2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-super-mocio-with-microfibre.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-tea-towel-cloth.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-teflon-twin-scourer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-triple-action-indoor-broom.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-ultramat-floor-cleaning-refill.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-window-cloth.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\vileda-wringer-rectangular.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\wind-wettex-24x25cm-2-1-free.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\aluminium-broom-stick.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\clinpan-kitchen-clas-sponges-3pcs.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\clinpan-kitchen-sponge-king-size.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\der-general-aloe-vera-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\der-general-classic-1-5l-50-free.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\der-general-fresh-breeze-1-5l-50-free.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\der-general-lavender-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\der-general-wild-rose-1-5l-50-free.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\domestos-pink-power-750ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\domestos-thick-bl-citrus-750ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\household-pets\domestos-thick-bleach-750ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\charcoal-shovel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\charcoal-tongs.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\clinpan-kitchen-clas-sponges-3pcs.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\clinpan-kitchen-sponge-king-size.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\der-general-aloe-vera-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\der-general-classic-1-5l-50-free.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\der-general-fresh-breeze-1-5l-50-free.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\der-general-lavender-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\der-general-wild-rose-1-5l-50-free.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\domestos-pink-power-750ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\domestos-thick-bl-citrus-750ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\domestos-thick-bleach-750ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\duracell-basic-aa-4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\duracell-basic-aaa-x4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\duracell-plus-power-9v.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\duracell-plus-power-cx2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\duracell-plus-power-dx2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\fay-cleaning-sponge-small.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\fay-colorful-sponges-small-x5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\feggari-louminia-moon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\firestar-fuel-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\fire-starting-chimney.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\frosch-dishwash-machine-tablets-30-pcs.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\fuji-laundry-dryer-20m.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\fujitsu-1x2016-lithium-3v-coin-battery.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\fujitsu-1x2025-lithium-3v-coin-battery.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\fujitsu-1x2032-lithium-3v-coin-battery.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\fujitsu-1x2430-lithium-3v-coin-battery.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\fujitsu-1x-alkaline-battery-1-5v.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\fujitsu-1xe-alkaline-battery.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\fujitsu-4xaaa-alkaline-batteries.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\fujitsu-alk-batteries-aa-x4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\fujitsu-alk-batteries-c-x2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\fujitsu-alk-batteries-d-x2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\gas-camper.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\gas-cylinder-10kg-including-cylinder.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\gas-cylinder-10kg-return-empty-cylinder.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\grill-brush-large.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\instagrill-disposable-bbq.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\jip-liquid-super-glue-3g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\karen-household-rubber-gloves.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\karen-latex-disp-gloves-pdr-x100.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\karen-vinyl-disp-gloves-no-powd-x100.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\karen-vinyl-disp-gloves-powd-free-10pcs.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\klinex-bleach-2l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\lihnari-karvounakia-12pcs.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\lihnari-karvounakia-24pcs.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\magma-hardwood-charcoal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\nickel-broom-stick.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\orione-iron-board.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\parafinelaio-lamp-oil-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\raid-night-day-set-1-device-free.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\ronson-flint-blister-3pcs.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\ronson-multi-purpose-lighter.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\ronson-piezzo-electrolite-blstr-3pcs.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\seftalia-double-skewers.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\swipe-amore-broom.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\swipe-bath-curtain-plastic-180-x-180.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\swipe-bath-curtain-pvc-180-x-180.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\swipe-car-sponge-epogenda-2090.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\swipe-liquid-somethin-else.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\swipe-mouette-lusso-broom.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\swipe-oro-argento-scourer-x2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\swipe-piumetta-x2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\swipe-pola-broom.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\swipe-scourer-inox-x2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\swipe-scourer-oro-x2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\swipe-shovel-brush-set.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\swipe-shovel-without-brush.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\swipe-sorgun-broom-with-handle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\swipe-stadio-broom.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\swipe-swie-liq-standard.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\swipe-swipe-bella-broom.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\tiger-tim-firelighters-x32.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\toilet-set-deluxe.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\toilet-set-medium.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-2in1-universal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-active-flex-twin-scourer-x2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-all-purp-cloth-odor-stop-2-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-all-purpose-cloth-3-1-free.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-all-purpose-cloth-4-2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-all-purpose-cloth-x3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-attractive-plus-dusting-system.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-bathtub-cleaner-mop.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-bucket-wringer-mf-mop-comp-set.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-car-cloth-packed.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-comfort-care-pair-large-gloves.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-comfort-care-pair-med-gloves.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-comfort-care-pair-small-gloves.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-drain-mat-50-59-3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-duactiva-indoor-broom.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-dustino-hand-duster.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-dustpan-set.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-eco-toilet-set.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-glitzi-bath-scourer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-glitzi-cr-antib-scour-2-1-free.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-glitzi-crystal-9pcs.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-glitzi-hard-scourer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-glitzi-power-inox-scourer-x2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-glitzi-soft-scourer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-handy-scourer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-indoor-broom-standard.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-inox-scouring-spiral-2-pieces.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-magical.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-microfibre-multi-cloth.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-microfibre-pad-cloth.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-microfibre-style-3-1-free.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-miraclean-scourer-4-pieces.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-mop-plastic-large.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-mop-plastic-small.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-multi-care-disp-gloves-md-l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-multicare-disp-gloves-sm-md.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-multi-sens-gloves-md-l-x40.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-multi-sens-gloves-sm-l-x40.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-protector-pair-medium-gloves.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-protector-pair-of-large-gloves.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-protector-pair-small-gloves.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-pumber-indoor-broom.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-rainbow-scourer-10-pieces.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-refill-active-mop-set.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-refill-for-dustino-hand-duster.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-round-bucket-12l-red-nozzle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-sensitive-pair-medium-gloves.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-sensitive-pair-of-large-gloves.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-sensitive-pair-of-small-gloves.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-sponge-cloth-power-x3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-starlet-semi-disp-cloth-x10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-super-grip-pair-large-gloves.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-super-grip-pair-medium-gloves.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-super-grip-pair-small-gloves.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-super-mocio-microfibre-x2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-super-mocio-with-microfibre.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-tea-towel-cloth.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-teflon-twin-scourer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-triple-action-indoor-broom.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-ultramat-floor-cleaning-refill.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-window-cloth.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\vileda-wringer-rectangular.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\washing-machine-bag-60x36cm.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\window-squeezy-cleaner-1-25m.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\window-squeezy-cleaner-2m.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\wind-wettex-24x25cm-2-1-free.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\aluminium-broom-stick.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\arix-cooker-filter.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\arix-elastic-ironing-board-cover-one-size.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\arix-jumbo-ironing-board-cover-155x56cm.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\arix-plastic-clothes-line-20m.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\arix-triplex-ironing-board-cover-140x50cm.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\assos-charcoal-5kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\battery-motor-1-5v.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\bbq-grill-complete-set.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\bbq-rotisserie-motor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\home-entertainment\bedouin-safety-matches-x10test.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\asparagus-cy-per-bunch.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\avocados-cy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\avocados-imported.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\baby-pumpkin-per-imported-kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\bananas-imported.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\beans-fresh.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\beetroots.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\blackberries-imported-125g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\black-eye-beans-fresh.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\blueberries-imported-125g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\broad-beans-fresh.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\carrots-imported.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\cauliflower.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\ceberg-cy-per-piece.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\celery-root-per-piece.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\chicory-imported.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\chinese-cabbage-cy-per-piece.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\chives-imported-per-bunch.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\coconut-per-piece.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\corns-cy-per-piece.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\courgettes-black.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\courgettes-palkapa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\courgettes-siaxourika.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\courgettes-white.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\cucumbers.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\cucumbers-field.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\eggplant-black.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\eggplant-red.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\fennel-imported-0-5kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\fresh-potatoes.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\garlic-imported-per-piece.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\gingers-imported-1-kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\gingers-imported-100g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\grapefruit-red-cy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\grapefruit-yellow-cy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\grape-red-globe-imp.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\grape-supiriot-imported.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\grape-thompson-imported.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\grape-white-imported.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\green-beans.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\green-chilly-peppers-cy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\green-peppers-cy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\horn-peppers.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\kiwis-extra.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\kohlrabi-per-piece.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\kolokasi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\leeks-cy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\limes-imported.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\lotus-imported.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\mandarins-extra.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\mandarins-nova.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\mango-imported.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\mantores-extra.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\melon-cy-ananas.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\melons-oken-cy-2kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\mushrooms.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\mushrooms-oyster.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\mushrooms-oyster-1-kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\nectarines-extra.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\okras.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\onions-fresh-kefales.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\onions-imported.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\oranges-for-juice.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\oranges-merl-n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\oranges-merl-n-extra.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\papaya-imported.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\peaches-imported-extra.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\pears-blanquilla.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\pears-conference-per-kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\peas.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\pepper-florinis-imp.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\peppers-orange-imp.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\peppers-red-imported.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\peppers-yellow-imported.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\pineapple-imported.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\plums-extra.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\plums-imported-extra.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\pomegranate-cy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\pomegranate-imported.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\pomela-cy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\poulles.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\radishes-per-piece.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\raspberries-imported-125g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\red-cabbage-per-kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\red-currant-imported-125g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\red-onions-imported.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\strawberries-cy-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\watermelon-6-kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\apples-golden-delic-a.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\apples-golden-delic-ex.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\apples-granny-a.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\apples-granny-extra.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\apples-pink-lady.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\apples-redchief-ex.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\apples-red-chief-ex-0-5kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\apples-red-chief-ex-1kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\apples-red-starkin-ex.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\apples-royal-gala-a.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fruit-vegetables\apples-royal-gala-extra.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\b-eye-10-chicken-fingers-250g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\b-eye-12-cod-fish-fingers-336g-3-free.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\b-eye-24-crispy-chick-dippers.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\b-eye-garden-peas-400g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\birds-eye-country-mix-reseal-690g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\b-stathis-fr-bamies-extra-450g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\b-stathis-fr-beans-beads-450g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\b-stathis-fr-beans-flat-450g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\b-stathis-fr-beans-round-450g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\b-stathis-fr-brocoli-750g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\b-stathis-fr-brussel-spr-450g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\b-stathis-fr-rice-corn-600g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\b-stathis-fr-rice-mushr-600g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\b-stathis-fr-seasonal-salad-750g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\b-st-fr-peas-artich-1kg-200g-free.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\emafoods-fr-br-fish-fillet-400g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\emafoods-fr-salmon-fil-with-skin-450g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\emafoods-frzn-atlantic-wreckfish-1-2kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\emafoods-frzn-bat-chi-nuggets-800g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\emafoods-frzn-b-fish-fillets-400g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\emafoods-frzn-black-tiger-16-20-1kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\emafoods-frzn-black-tiger-21-30-1kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\emafoods-frzn-blue-shark-900g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\emafoods-frzn-bogue-400g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\emafoods-frzn-b-sur-crab-claws-330g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\emafoods-frzn-chicken-breast-fillet-1kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\emafoods-frzn-chicken-burger-520g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\emafoods-frzn-chicken-wings-2kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\emafoods-frzn-chi-drumsticks-800g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\emafoods-frzn-chi-leg-quarters-2kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\emafoods-frzn-clnd-cuttlefish-900g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\emafoods-frzn-fish-nuggets-300g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\emafoods-frzn-h-shell-mussels-400g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\emafoods-frzn-mussel-meat-400g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\emafoods-frzn-octopus-gutted-1kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\emafoods-frzn-octopus-gutted-2kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\emafoods-frzn-pork-caul-fat-400g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\emafoods-frzn-red-fish-900g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\emafoods-frzn-red-porgy-1-3kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\emafoods-frzn-samosas-shrimps-300g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\emafoods-frzn-shrimps-100-200-400g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\emafoods-frzn-shrimps-tail-on-400g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\emafoods-frzn-silver-smelt-400g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\emafoods-frzn-squid-rings-1kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\emafoods-frzn-sur-crab-sticks-250g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\emafoods-frzn-sweet-corn-900g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\emafoods-frzn-white-beans-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\emafoods-frzn-whole-cuttlefish-900g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\emafoods-frzn-whole-round-squid-1kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\gregoriou-6-burger-480g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\grigoriou-chicken-fillets-450g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\grigoriou-chicken-nuggets-400g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\grigoriou-margarita-pizza-430g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\grigoriou-pork-fillets-400g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\grigoriou-sieftalies-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\grigoriou-turkey-burgers-480g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\grigoriou-western-chicken-wings-470g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\grigoriou-wiener-schnitzel-400g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\kanaki-fillo-kroustas-450g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\kanaki-mini-pizza-420g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\kanaki-rolling-bougatsa-400g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\kanaki-rolling-cheese-pie-400g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\mccain-kid-smile-600g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\mccain-med-country-potato-750g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\mccain-mozzarella-sticks-210g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\mccain-onion-rings-400g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\mccain-steakhouse-1kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\mccain-tradition-potatoes-1kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\mint-chckn-minced-meat-650g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\mint-chckn-wings-sthrn-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\mint-chicken-bites-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\mint-chicken-burgers-400g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\mint-chicken-gizzard-650g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\mint-chicken-goujons-1kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\mint-chicken-liver-650g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\mint-chicken-nuggets-1kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\mint-chicken-nuggets-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\mint-cuttlefish-cleaned-800g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\mint-green-beans-1kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\mint-hoki-fillet-1kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\mint-hoki-fillet-crumbed-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\mintikkis-frozen-beef-burgers.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\mintikkis-panna-per-kilo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\mint-mackerel-1kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\mint-mixed-vegetables-1kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\mint-octopus-800g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\mint-pangasius-fillet-750g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\mint-red-fish-1kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\mint-shrimps-h-on-21-30-1kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\mint-squid-cleaned-800g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\mint-squid-rings-1kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\mint-vegetable-burgers-6pcs.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\polaretti-fruit-ice-lollies-x10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\sarels-mackerel-skoumpri-kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\sarels-norweg-salmon-port-kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\barba-stathis-fr-spinach-leaves-1kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\barba-stathis-salad-corn-450g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\b-eye-2-breaded-fish-fillets-200g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\b-eye-2-crispy-chick-170g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\frozen-food\b-eye-4-chicken-burgers-227g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\biser-sunflower-oil-5l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\bonomi-lady-fingers-3pack.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\charalambous-coffee-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\coffee-mate-fat-free-200g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\david-fine-aroma-filter-cof-250g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\david-rich-aroma-filter-cof-250g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\d-egberts-espresso-inst-100g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\d-egberts-espresso-inst-200g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\dilmah-blackcurrant-20x2g-env.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\dilmah-caramel-20x2g-env.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\dilmah-decaffeine-50x2g-tb.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\dilmah-decaf-green-20x1-5g-tb.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\dilmah-green-tea-20x1-5g-tb.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\dilmah-jasmine-20x1-5g-env.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\dilmah-jasmine-20x1-5g-tb.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\dilmah-jasmine-leaf-tea-125g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\dilmah-mint-20x1-5g-tb.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\dilmah-mint-20x2g-env.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\dilmah-morocan-mint-20x1-5g-tb.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\dilmah-moroccan-mint20x1-5g-env.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\dilmah-peppermint-20x1-5g-env.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\dilmah-peppermint-20x1-5g-tb.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\dilmah-raspberry-20x2g-env.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\dilmah-regular-50x1-5g-tb.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\dilmah-regular-100x1-5g-tb.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\dilmah-regular-100x2g-env.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\dilmah-regular-100x2g-tb.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\dilmah-roibos-organic-x20-env.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\dilmah-strawberry-20x1-5g-tb.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\dilmah-strawberry-20x2g-env.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\dilmah-vanilla-20x2g-env.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\dilmah-variety-green-x20-env.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\dilmah-variety-pack-20x2g-env.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\douwe-egberts-hazelnut-50g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\edusc-a-la-carte-sel-med-cof-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\fresko-mushroom-slices-400g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\fresko-mushroom-whole-400g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\grandos-aromalt-coffee-100g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\grandos-gold-inst-coffee-50g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\grandos-gold-inst-coffee-100g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\grandos-gold-sticks-200x1-8g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\grandos-mocca-inst-coffee-50g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\grandos-mocca-inst-coffee-100g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\grandos-mocca-inst-coffee-200g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\heinz-mayo-light-td-425g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\heinz-tomato-ketchup-460g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\h-h-apple-cinnamon-20x2-5g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\h-h-camomile-20x2-5g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\h-h-nettle-20x2g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\h-h-night-time-20x2g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\h-h-peppermint-20x2g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\jacobs-intst-coffee-100g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\kellogg-s-chocos-375g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\kellogg-s-variety-195g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\lf-h-camomile-t-b-20x1-5g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\lf-h-gr-tea-black-currant-t-b-20x2g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\lf-h-gr-tea-jasmine-flowers-t-b-20x2-5g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\lf-h-gr-tea-orange-t-b-20x2g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\lf-h-gr-tea-peach-t-b-20x2g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\lf-h-gr-tea-var-pack-t-b-20x2g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\lf-h-lime-lemon-t-b-20x2-5g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\lipton-infusion-herbal-apple-cinn-20x2-2g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\lipton-nirvana-grn-tea-36g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\magia-double-lion-55g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\melita-paper-cof-filter-2-40.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\melita-paper-cof-filter-4-40.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\melitta-bella-creama-espresso-250g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\melitta-cafe-mocca-250g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\melitta-cafe-premium-250g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\melitta-classico-cappuccino-400g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\mitsides-plain-flour-1kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\mitsides-village-flour-1kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\nat-life-mahalep-powder-10g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\nat-life-masticha-powder-7g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\nescafe-classic-decafeine-50g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\nescafe-espresso-100g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\nescafe-gold-decaf-100g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\nescafe-green-blend-100g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\nescafe-select-100g-jar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\nestle-coffee-mate-cream-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\nestle-honey-nut-cheerios-375g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\nestle-lion-cereal-400g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\n-life-black-20-tea-bags.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\n-life-cinnamon-20-tea-bags.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\n-life-cy-anise-20-tea-bags.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\n-life-cy-basil-20-tea-bags.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\n-life-cy-calendula-20-tea-bags.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\n-life-cy-chamomile-20-tea-bags.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\n-life-cy-lavender-20-tea-bags.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\n-life-cy-lemon-20-tea-bags.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\n-life-cy-mix-herbs-20-tea-bags.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\n-life-cyprus-mix-20-tea-bags.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\pelargos-tomato-passata-3x250g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\s-a-s-cof-filter-12x10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\triumph-self-raising-flour-1kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\3a-parboiled-rice-1kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\alhenco-vanilla-sugar-50g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\ambrosia-soyabean-oil-4l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\food-cupboard\bambu-instant-coffee-100g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\amoy-light-soy-sauce-150ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\amoy-low-salt-soy-sauce-150ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\amoy-rg-oyster-sauce-150ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\amoy-stw-chow-mein-sauce-120g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\amoy-stw-pean-satay-sauce-120g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\amoy-stw-rice-noodles-300g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\amoy-stw-udon-noodles-300g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\amoy-sweet-chili-sauce-150ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\amoy-tangy-sweet-sour-sauce-120g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\amoy-teriyaki-sauce-150ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\df-houmous-salad-250g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\df-tahini-700g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\df-tahini-plastic-250g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\df-tahinosalata-2-5kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\df-tahinosalata-250g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\df-taramosalata-250g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\doritos-hot-spicy-dip-300g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\doritos-mild-clasic-dip-300g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\doritos-nacho-cheese-dip-300g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\doritos-sour-cream-chive-dip-300g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\el-paso-fajita-dinner-kit-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\el-sabor-cheese-dip-300g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\el-sabor-guacamole-dip-300ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\el-sabor-nachos-bbq-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\el-sabor-nachos-cheese-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\el-sabor-nachos-chilli-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\el-sabor-nachos-natural-100g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\el-sabor-salsa-dip-300ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\el-sabor-taco-spice-mix-35g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\gaea-olives-kalamon-paste-100g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\go-tan-egg-noodles-250g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\heinz-chinese-chckn-sauce-500g-20-off.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\imee-beef-noodles-65g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\imee-beef-noodles-70g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\imee-chicken-noodles-65g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\imee-shrimp-noodles-65g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\imee-shrimp-noodles-70g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\imee-veg-noodles-65g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\imee-veg-noodles-70g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\kikkoman-soy-sauce-150ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\ledra-pure-tahini-240g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\mama-instant-noodles-150g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\mama-instant-noodles-ch-flavor-60g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\mama-instant-noodles-hot-spicy-90g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\mama-inst-noodles-porkflavor-60g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\mama-inst-noodles-shrimp-t-y-fl-60g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\mama-inst-noodles-shrimp-t-y-fl-60g-18270.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\old-el-paso-fajita-sauce-orig-mild-235g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\old-el-paso-taco-salsa-hot-235g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\old-el-paso-taco-salsa-mild-235g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\old-el-paso-tortillas-326g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\salm-eggplants-paste-emelia-360g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\salm-marrows-paste-emelia-360g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\salmona-champagne-semi-dry-11-sovetskoe-75cl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\salmona-cod-liver-canned-ulan-240g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\salmona-cookies-classic-lackmann-100g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\salmona-cookies-strawberry-lackmann-100g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\salmona-dry-codfish-msdm-36g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\salmona-dry-horse-mackerel-msdm-36g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\salmona-dry-peas-altaiskaia-skazka-800g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\salmona-dry-smeltfish-korushka-msdm-36g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\salmona-gingerbread-honey-7ja-400g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\salmona-gingerbr-van-7ja-400g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\salmona-marshmallow-mix-lackmann-310g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\salmona-pate-ch-tri-oxotnika-135g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\salmona-pate-goose-tri-oxotnika-135g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\salmona-pate-turkey-tri-oxotnika-135g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\salmona-pearl-barley-altaiskaia-skazka-800g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\salmona-salted-pickled-cuc-tesha-860g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\salmona-sl-salted-pickled-cuc-tesha-000g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\salmona-sparkling-mineral-water-narzan-500ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\salmona-sprat-in-tomato-777-ulan-240g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\salmona-sprats-in-oil-ulan-160g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\salmona-sunfl-seeds-babkini-300g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\salmona-sunfl-seeds-salted-babkini-300g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\salmona-vermicelli-beef-rollton-60g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\yutaka-bamboo-chopsticks-8-pairs.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\yutaka-bamboo-sushi-rolling-mat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\yutaka-mirin-150ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\yutaka-sushi-ginger-190g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\yutaka-sushi-rice-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\yutaka-wasabi-paste-43g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\ambrosia-houmoi-250g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\ambrosia-tahini-salad-250g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\ambrosia-taramas-salad-250g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\amoy-chili-sauce-150ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ethnic-food-ready-meals\amoy-dark-soy-sauce-150ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\agros-water-bottles-pet-6x1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\agros-water-sports-cap-12x0-5l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\bacardi-breezer-lemon-27-5cl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\bacardi-breezer-lime-27-5cl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\bacardi-breezer-orange-27-5cl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\bacardi-breezer-wmellon-27-5cl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\bardinet-grenadine-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\blu-sparkling-water-6x25cl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\blu-sparkling-water-25cl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\blu-sparkling-water-75cl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\calvet-syrah-red-75c.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\carlsberg-8x33cl-cans.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\carosol-wine-red-dry-75cl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\carosol-wine-rose-dry-75cl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\carosol-wine-white-dry-75cl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\coca-cola-8x330ml-can.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\coca-cola-bottle-pet-1-5l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\coca-cola-bottle-pet-2l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\ena-utd-fruits-mango-ban-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\ena-utd-fruits-mango-ban-4x1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\ena-utd-fruits-pomegr-bberry-9x250ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\famous-grouse-whisky-70cl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\farmakas-water-10l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\farmakas-water-pet-6x1-5l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\farmakas-water-pet-12x500ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\fortant-sauvignon-blanc-75cl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\gerolsteiner-apple-500ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\gerolsteiner-sprakling-pet-1-5l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\gerolsteiner-sprudel-pet-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\gerolsteiner-sprudel-pet-500ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\gerolst-sprakling-glass-750ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\herbous-ice-tea-cinnamon-honey-500ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\herbous-ice-tea-estragon-pet-500ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\herbous-ice-tea-lemon-pet-500ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\herbous-ice-tea-pomegranade-500ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\isostar-orange-500ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\ivi-apple-juice-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\ivi-apple-juice-9x250ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\ivi-energy-7-blue-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\ivi-energy-7-blue-9x250ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\ivi-energy-7-orange-juice-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\ivi-energy-7-red-juice-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\ivi-energy-red-9x250ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\ivi-go-blue-juice-9x250ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\ivi-go-red-juice-9x250ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\ivi-orange-6x330ml-cans.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\ivi-orange-juice-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\ivi-orange-juice-9x250ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\ivi-peach-nectar-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\ivi-peach-nectar-9x250ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\kean-apple-juice-9x250ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\kean-grapefruit-juice-9x250ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\keanita-orange-9x250ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\kean-orange-6x330ml-cans.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\kean-orangeade-250ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\kean-peach-juice-9x250ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\kean-pineapple-juice-9x250ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\kean-pomeg-mango-juice-9x250ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\keo-beer-6x33cl-cans.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\kykkos-natural-water-6x1-5l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\kykkos-natural-water-12x500ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\lipton-ice-gr-tea-lemon-500ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\lipton-ice-tea-lemon-pet-500ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\nescafe-xpress-black-250ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\nescafe-xpress-white-250ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\pepsi-8x330ml-cans.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\pepsi-diet-8x330ml-cans.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\pepsi-max-8x330ml-cans.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\perrier-mineral-water-6x20cl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\perrier-water-4x33cl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\perrier-water-bot-lemon-33cl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\perrier-water-bot-lime-33cl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\perrier-water-bottle-75cl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\perrier-water-slim-can-25cl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\perrier-water-slim-cans-10x25cl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\pfanner-ice-green-tea-500ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\pfanner-ice-tea-lem-lime-500ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\pfanner-ice-tea-mago-fair-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\pfanner-ice-tea-orange-fair-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\pfanner-ice-tea-peach-500ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\san-pellegrino-sparkl-water-6x25cl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\san-pellegrino-sparkl-water-75cl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\smirnoff-ice-vodka-275ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\somersby-cider-bottle-33cl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\souroti-sparkl-water-6x330ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\souroti-sparkl-water-750ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\soyroti-sparkl-water-6x250ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\sprite-8x330ml-can.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\vitel-water-glass-bottle-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\7up-8x330ml-cans.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\7up-bottle-pet-2l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\7up-bottle-pet-6x500ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\7up-bottle-pet-500ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\7up-diet-8x330ml-cans.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\7up-diet-bottle-pet-2l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\7up-diet-bottles-pet-6x500ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\agios-nikolaos-water-6x1-5l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\agros-mineral-water-pet-1-5l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\agros-water-bottles-12x0-5l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\drinks\agros-water-bottles-pet-6x1-5l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\alpro-rice-drink-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\alpro-soya-cream-light-250ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\alpro-soya-des-caramel-4x125g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\alpro-soya-des-choco-4x125g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\alpro-soya-des-fondant-4x125g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\alpro-soya-des-vanilla-4x125g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\alpro-soya-drink-banana-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\alpro-soya-drink-choc-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\alpro-soya-drink-chocola-250ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\alpro-soya-drink-cuisina-250ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\alpro-soya-drink-light-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\alpro-soya-drink-nature-organic-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\alpro-soya-drink-unsweetend-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\alpro-soya-drink-vanilla-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\alpro-soya-drink-vanilla-250ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\alpro-soya-natural-calcium-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\alpro-soy-natural-calcium-drink-500ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\becel-pro-activ-lght-sprd-250g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\becel-pro-activ-mlk-1l-0-fat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\becel-pro-activ-mlk-1l-1-8-fat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\becel-pro-activ-olive-oil-250g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\becel-pro-activ-spread-500g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\carnation-evapore-milk-410g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\carn-evapore-milk-light-4-410g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\c-castle-garl-herb-butter-70g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\charalambides-calciumplus-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\charalambides-ful-fat-milk-2l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\charalambides-semiskimmed-1-5l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\charalambides-semiskimmed-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\charalambides-semiskimmed-2l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\charalambides-skimmed-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\char-fresh-milk-1-5l-3-fat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\char-fresh-milk-1l-3-fat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\christies-sour-cream-200ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\christies-whipping-cream-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\christis-milk-delact-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\drinho-soyamilk-low-sugar-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\drinho-soyamilk-soyamilk-hi-calcium-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\fiorentini-100-blueberry-juice-mirtillo-330ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\frico-unsalted-butter-200g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\hain-coc-dream-orig-calcium-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\hain-rice-dream-orig-calc-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\hain-rice-dream-orig-organ-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\ker-olive-soft-butter-light-250g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\koko-drink-coconut-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\kolln-oat-chocolate-drink-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\kolln-oat-drink-almond-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\kolln-oat-drink-classic-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\lanitis-full-fat-milk-1-5l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\lanitis-full-fat-milk-2l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\lanitis-lact-light-1-5-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\lanitis-milk-calcium-plus-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\lanitis-milk-full-fat-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\lanitis-milk-semi-skimmed-1-5l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\lanitis-milk-semi-skimmed-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\lanitis-milk-semi-skimmed-2l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\lanitis-milk-skimmed-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\mana-evapore-milk-410g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\mana-sweet-milk-1kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\mana-sweet-milk-397g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\meggle-cook-cream-20-fat-250ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\meggle-cream-spray-250ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\meggle-creme-patisserie-unswt-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\mint-eggs-m-53-63g-x6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\mint-eggs-m-53-63g-x18.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\mint-eggs-m-53-63g-x30.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\mint-eggs-m-53-63-x12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\mleko-uht-milk-1-5-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\mleko-uht-milk-3-2-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\nestle-milkmaid-sweet-mlk-1kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\nestle-milkmaid-sweet-mlk-397g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\nounou-evapore-10x15g-portions.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\nounou-lght-evap-10x15g-port.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\nounou-light-evapore-milk-170g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\noynoy-evap-f-fat-milk-170g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\noynoy-evapore-full-fat-milk-400g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\noynoy-evapore-light-milk-400g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\noynoy-sweet-milk-397g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\olympus-esl-milk-1-5-fat-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\olympus-esl-milk-3-5-fat-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\pittas-halloumi-vp-225g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\provamel-bio-drink-vanilla-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\provamel-bio-soya-natural-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\provamel-bio-soya-plus-calcium-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\regilait-instant-skim-milk-250g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\remia-margarine-gold-foil-250g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\remia-margarine-light-250g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\remia-soft-margarine-2kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\soyfresh-soyamilk-natural-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\alambra-yoghurt-giagia-400g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\alambra-yogurt-giagia-700g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\alpro-almond-drink-unsweetened-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\alpro-dessert-speculoos-4x125g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\alpro-drink-banana-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\alpro-drink-banana-250ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\alpro-drink-coconut-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\alpro-drink-natural-250ml.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\alpro-drink-oat-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dairy-eggs\alpro-hazelnut-drink-1l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\ic_remove_shopping_cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_remove_shopping_cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_remove_shopping_cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_remove_shopping_cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\ic_shopping_cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\ic_shopping_cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_shopping_cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_shopping_cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_shopping_cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\menu\category_menu.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\ic_sort_by_alpha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\ic_sort_by_alpha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_sort_by_alpha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_sort_by_alpha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_sort_by_alpha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\ic_sort_by_price.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\ic_sort_by_price.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_sort_by_price.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_sort_by_price.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_sort_by_price.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\anim\enter_left.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\splash_screen.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\splash_icon.png" />
+  </ItemGroup>
+  <Import Project="..\AvorLight\AvorLight.projitems" Label="Shared" Condition="Exists('..\AvorLight\AvorLight.projitems')" />
+  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <Import Project="..\..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets'))" />
+  </Target>
+</Project>
